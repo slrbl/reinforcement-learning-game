@@ -42,8 +42,8 @@ function addRandomBlockers(density){
         (
           (
             (blockerLeftCoord == princess.offsetLeft) && (blockerTopCoord == princess.offsetTop))
-            || ((blockerLeftCoord == horse.offsetLeft) && (blockerTopCoord == horse.offsetTop))
-            || ((blockerTopCoord == wolf.offsetTop) && (blockerTopCoord == wolf.offsetTop)))
+            || ((blockerLeftCoord == mario.offsetLeft) && (blockerTopCoord == mario.offsetTop))
+            || ((blockerTopCoord == agent.offsetTop) && (blockerTopCoord == agent.offsetTop)))
             == false){
         blocker.style.left = blockerLeftCoord+"px";
         blocker.style.top = blockerTopCoord+"px";
@@ -80,10 +80,10 @@ function start_game(){
   logEvent('Starting a new game..')
   logEvent('You can start when you are ready')
   logEvent('Use direction keys to move mario')
-  wolf.style.left = env.offsetLeft+"px";
-  wolf.style.top = env.offsetTop+"px";
-  horse.style.left = env.offsetLeft+unit+"px";
-  horse.style.top = env.offsetTop+"px";
+  agent.style.left = env.offsetLeft+"px";
+  agent.style.top = env.offsetTop+"px";
+  mario.style.left = env.offsetLeft+unit+"px";
+  mario.style.top = env.offsetTop+"px";
   mario_score = 0;
   ai_score = 0;
   game_started=true

@@ -1,4 +1,4 @@
-.horse {
+.mario {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -14,7 +14,7 @@
   background-image: url("../images/princess2.png");
 }
 
-.wolf {
+.agent {
   position: absolute;
   width: 35px;
   height: 35px;

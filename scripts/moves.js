@@ -9,8 +9,8 @@ function checkKey(e) {
     alert('Game Over')
   }
   e = e || window.event;
-  var xCoord = horse.offsetLeft;
-  var yCoord = horse.offsetTop;
+  var xCoord = mario.offsetLeft;
+  var yCoord = mario.offsetTop;
   var step = unit;
   var previous_xCoord=xCoord;
   var previous_yCoord=yCoord;
@@ -37,20 +37,20 @@ function checkKey(e) {
         yCoord -= step;}
       break;
   }
-  if ((checkBlockerCollision(horse,blockers) == false) && (checkCollision(horse,wolf)==false)&& (checkCollision(horse,princess)==false)){
-    horse.style.left = xCoord + "px";
-    horse.style.top = yCoord + "px";
+  if ((checkBlockerCollision(mario,blockers) == false) && (checkCollision(mario,agent)==false)&& (checkCollision(mario,princess)==false)){
+    mario.style.left = xCoord + "px";
+    mario.style.top = yCoord + "px";
     logEvent(xCoord+','+yCoord)
 
   }
   else{
-    horse.style.left=env.offsetLeft+unit+"px";
-    horse.style.top=env.offsetTop+"px";
-    xCoord=horse.offsetLeft;
-    yCoord=horse.offsetTop;
+    mario.style.left=env.offsetLeft+unit+"px";
+    mario.style.top=env.offsetTop+"px";
+    xCoord=mario.offsetLeft;
+    yCoord=mario.offsetTop;
     logEvent("collision -> init")
   }
-  if (horse.offsetLeft == princess.offsetLeft && horse.offsetTop == princess.offsetTop){
+  if (mario.offsetLeft == princess.offsetLeft && mario.offsetTop == princess.offsetTop){
     alert("You win")
   }
 }
@@ -59,10 +59,10 @@ function checkKey(e) {
 
 function moveAgent(q_matrix,speed) {
 
-  wolf.style.left=env.offsetLeft+"px";
-  wolf.style.top=env.offsetTop+"px";
-  var xCoord = wolf.offsetLeft;
-  var yCoord = wolf.offsetTop;
+  agent.style.left=env.offsetLeft+"px";
+  agent.style.top=env.offsetTop+"px";
+  var xCoord = agent.offsetLeft;
+  var yCoord = agent.offsetTop;
   var step = unit;
   var id = setInterval(frame, speed);
   var current_position = 0;
@@ -78,8 +78,8 @@ function moveAgent(q_matrix,speed) {
   creazy=false;
   var col=false;
   function frame() {
-    if ((wolf.offsetLeft == princess.offsetLeft && wolf.offsetTop == princess.offsetTop) || direction == -1 || creazy==true  || col==true) {
-      if (wolf.offsetLeft == princess.offsetLeft-35 || wolf.offsetTop == princess.offsetTop-35 || wolf.offsetLeft == princess.offsetLeft+35 || wolf.offsetTop == princess.offsetTop+35){
+    if ((agent.offsetLeft == princess.offsetLeft && agent.offsetTop == princess.offsetTop) || direction == -1 || creazy==true  || col==true) {
+      if (agent.offsetLeft == princess.offsetLeft-35 || agent.offsetTop == princess.offsetTop-35 || agent.offsetLeft == princess.offsetLeft+35 || agent.offsetTop == princess.offsetTop+35){
         logEvent('Princess found')
 
         localStorage.princess_found = true
@@ -139,15 +139,15 @@ function moveAgent(q_matrix,speed) {
           xCoord -= step;
       }
 
-      wolf.style.left = xCoord + "px";
-      wolf.style.top = yCoord + "px";
+      agent.style.left = xCoord + "px";
+      agent.style.top = yCoord + "px";
       logEvent(xCoord+','+yCoord)
 
-      col=checkBlockerCollision(wolf,blockers)
-      if ((col==true) || (checkCollision(horse,wolf)==true) || (checkCollision(princess,wolf)==true)){
+      col=checkBlockerCollision(agent,blockers)
+      if ((col==true) || (checkCollision(mario,agent)==true) || (checkCollision(princess,agent)==true)){
         logEvent("collision -> restart");
-        wolf.style.left = env.offsetLeft+"px";
-        wolf.style.top = env.offsetTop+"px";
+        agent.style.left = env.offsetLeft+"px";
+        agent.style.top = env.offsetTop+"px";
       }
 
       previous_direction = direction;

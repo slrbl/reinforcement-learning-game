@@ -3,23 +3,23 @@
  * walid.daboubi@gmail.com
  */
 
-horse = document.getElementById("horse")
-wolf = document.getElementById("wolf")
+mario = document.getElementById("mario")
+agent = document.getElementById("agent")
 princess = document.getElementById("princess")
 env = document.getElementById("env")
 level_select = document.getElementById("level");
 train_btn = document.getElementById("train");
 
-unit = horse.offsetWidth;
+unit = mario.offsetWidth;
 width_in_unit = env.offsetWidth/unit;
 height_in_unit = env.offsetHeight/unit;
 
 princess.style.left = env.offsetLeft+(width_in_unit/2-1)*unit + "px";
 princess.style.top = env.offsetTop+(height_in_unit/2-3)*unit + "px";
-wolf.style.left = env.offsetLeft+"px";
-wolf.style.top = env.offsetTop+"px";
-horse.style.left = env.offsetLeft+unit+"px";
-horse.style.top = env.offsetTop+"px";
+agent.style.left = env.offsetLeft+"px";
+agent.style.top = env.offsetTop+"px";
+mario.style.left = env.offsetLeft+unit+"px";
+mario.style.top = env.offsetTop+"px";
 
 var blockers=[];
 
