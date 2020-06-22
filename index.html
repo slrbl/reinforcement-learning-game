@@ -1,106 +1,35 @@
 <!--
  Self playing mario game with q-learning
- walid.daboubi@gmail.com   
+ walid.daboubi@gmail.com
 -->
 
+<!DOCTYPE html>
 <html>
-    <style>
-      .horse {
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        background-size: 35px 35px;
-        background-image: url("./images/mario6.png");
-      }
-
-      .princess {
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        background-size: 35px 35px;
-        background-image: url("./images/princess2.png");
-      }
-
-      .wolf {
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        background-size: 35px 35px;
-        background-image: url("./images/robot.png");
-      }
-
-      .tree{
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        background-size: 35px 35px;
-        background-image: url("./images/tree4.png");
-      }
-
-      .wall{
-        position: absolute;
-        width: 35px;
-        height: 35px;
-        background-size: 35px 35px;
-        background-image: url("./images/mario_wall.png");
-      }
-
-      .env {
-        position: absolute;
-        left: 300px;
-        top: 10px;
-        width: 700px;
-        height: 700px;
-        background-color:gainsboro;
-      }
-
-      .env_matrix {
-        position: absolute;
-        left: 600px;
-        top: 40px;
-        width: 500px;
-        height: 500px;
-        background-color:grey;
-      }
-
-      .info {
-        position: absolute;
-        left: 10px;
-        top: 40px;
-        width: 280px;
-        height: 670px;
-        background-color:whitesmoke;
-        overflow-y: scroll;
-      }
-
-      .container{
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 1005px;
-        height: 715px;
-        background-color: whitesmoke;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-</style>
-
-
-<body>
-<div class="container">
-
-  <button onclick="reset()">Reset</button>
-  <button onclick="start_game()">Start Game</button>
-  <button onclick="moveWolf(TrainOnce(100),50)">Train</button></div>
-
-<div class="env" id="env"></div>
-<div class="horse" id="horse"></div>
-<div class="princess" id="princess"></div>
-<div class="wolf" id="wolf"></div>
-<script src="game.js"></script>
-
-<code class="info" id="info"></code>
-
-</body>
-
+  <head>
+    <title>Mario Vs. Ai</title>
+    <link rel="stylesheet" href="mario.css">
+  </head>
+  <body>
+    <div class="container">
+      <select onchange="reset()" id="level">
+        <option value="100">Level 0</option>
+        <option value="20">Level 1</option>
+        <option value="15">Level 2</option>
+        <option value="10">Level 3</option>
+        <option value="7">Level 4</option>
+      </select>
+      <button onclick="infiniteTrain()">Train</button>
+      <button onclick="reset()">Reset</button>
+      <button onclick="start_game()">New Game</button>
+    </div>
+    <div class="env" id="env"></div>
+    <div class="horse" id="horse"></div>
+    <div class="princess" id="princess"></div>
+    <div class="wolf" id="wolf"></div>
+    <code class="info" id="info"></code>
+  </body>
+  <script src="env.js"></script>
+  <script src="ai.js"></script>
+  <script src="moves.js"></script>
+  <script src="game.js"></script>
 </html>

@@ -1,0 +1,86 @@
+.horse {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  background-image: url("./images/mario6.png");
+}
+
+.princess {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  background-image: url("./images/princess2.png");
+}
+
+.wolf {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  background-image: url("./images/robot.png");
+}
+
+.tree{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  background-image: url("./images/tree4.png");
+}
+
+.tortule{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  background-image: url("./images/tortule.png");
+}
+
+.wall{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
+  background-image: url("./images/mario_wall.png");
+}
+
+.env {
+  position: absolute;
+  left: 300px;
+  top: 10px;
+  width: 700px;
+  height: 700px;
+  background-color:gainsboro;
+}
+
+.env_matrix {
+  position: absolute;
+  left: 600px;
+  top: 40px;
+  width: 500px;
+  height: 500px;
+  background-color:grey;
+}
+
+.info {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  width: 280px;
+  height: 670px;
+  background-color:whitesmoke;
+  overflow-y: scroll;
+}
+
+.container{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1005px;
+  height: 715px;
+  background-color: whitesmoke;
+  padding-left: 10px;
+  padding-top: 10px;
+}
