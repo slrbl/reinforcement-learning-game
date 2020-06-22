@@ -3,7 +3,7 @@
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  background-image: url("./images/mario6.png");
+  background-image: url("../images/mario6.png");
 }
 
 .princess {
@@ -11,7 +11,7 @@
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  background-image: url("./images/princess2.png");
+  background-image: url("../images/princess2.png");
 }
 
 .wolf {
@@ -19,7 +19,7 @@
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  background-image: url("./images/robot.png");
+  background-image: url("../images/robot.png");
 }
 
 .tree{
@@ -27,7 +27,7 @@
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  background-image: url("./images/tree4.png");
+  background-image: url("../images/tree4.png");
 }
 
 .tortule{
@@ -35,7 +35,7 @@
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  background-image: url("./images/tortule.png");
+  background-image: url("../images/tortule.png");
 }
 
 .wall{
@@ -43,7 +43,7 @@
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
-  background-image: url("./images/mario_wall.png");
+  background-image: url("../images/mario_wall.png");
 }
 
 .env {

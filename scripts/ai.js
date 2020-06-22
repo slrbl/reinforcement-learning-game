@@ -154,9 +154,11 @@ function trainAgent(training_sessions){
 function infiniteTrain(){
   localStorage.princess_found=false
   var id = setInterval(frame2, 3000);
+  train_btn.disabled = true;
   function frame2() {
     if (localStorage.princess_found=='true'){
       alert('Ready to start a new game')
+      train_btn.disabled = false;
       clearInterval(id);
     }
     if (localStorage.princess_found=='false'){

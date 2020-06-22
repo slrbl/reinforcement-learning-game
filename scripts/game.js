@@ -8,6 +8,7 @@ wolf = document.getElementById("wolf")
 princess = document.getElementById("princess")
 env = document.getElementById("env")
 level_select = document.getElementById("level");
+train_btn = document.getElementById("train");
 
 unit = horse.offsetWidth;
 width_in_unit = env.offsetWidth/unit;

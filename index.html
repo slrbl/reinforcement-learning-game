@@ -7,7 +7,7 @@
 <html>
   <head>
     <title>Mario Vs. Ai</title>
-    <link rel="stylesheet" href="mario.css">
+    <link rel="stylesheet" href="./style/mario.css">
   </head>
   <body>
     <div class="container">
@@ -18,7 +18,7 @@
         <option value="10">Level 3</option>
         <option value="7">Level 4</option>
       </select>
-      <button onclick="infiniteTrain()">Train</button>
+      <button onclick="infiniteTrain()" id="train">Train</button>
       <button onclick="reset()">Reset</button>
       <button onclick="start_game()">New Game</button>
     </div>
@@ -28,8 +28,8 @@
     <div class="wolf" id="wolf"></div>
     <code class="info" id="info"></code>
   </body>
-  <script src="env.js"></script>
-  <script src="ai.js"></script>
-  <script src="moves.js"></script>
-  <script src="game.js"></script>
+  <script src="scripts/env.js"></script>
+  <script src="scripts/ai.js"></script>
+  <script src="scripts/moves.js"></script>
+  <script src="scripts/game.js"></script>
 </html>
